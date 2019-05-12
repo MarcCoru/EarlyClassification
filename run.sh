@@ -15,13 +15,13 @@ Rscript posterior.probabilities.R
 echo "3.- Optimization: "
 echo $(date)
 
-cd ./Code/Optimization/Others
+cd /EarlyClassification/Code/Optimization/Others
 Rscript optimization.simple.R
 
 echo "4.- Prediction: "
 echo $(date)
 
-cd ./Prediction/Others
+cd /EarlyClassification/Prediction/Others
 Rscript prediction.R
 
 echo "done..."

@@ -1,6 +1,8 @@
-## Fork Dockerfile
+# Fork
+added `Dockerfile` and execution script `run.sh`
 
-marc.russwurm@tum.de
+forked by marc.russwurm@tum.de
+code by Usue Mori (usue.mori@ehu.eus) (original `README.txt` below)
 
 build docker image with all dependencies
 ```
@@ -12,10 +14,12 @@ run interactively
 docker run -ti EarlyClassification
 ```
 
-run steps 1.4 from the original code
+run steps 1 to 4 from the original code
 ```
 docker run EarlyClassification bash run.sh
 ```
+
+# Original Code
 
 ```
 ########################################################
