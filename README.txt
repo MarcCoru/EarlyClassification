@@ -1,4 +1,23 @@
+## Fork Dockerfile
 
+marc.russwurm@tum.de
+
+build docker image with all dependencies
+```
+docker build -t EarlyClassification .
+```
+
+run interactively
+```
+docker run -ti EarlyClassification
+```
+
+run steps 1.4 from the original code
+```
+docker run EarlyClassification bash run.sh
+```
+
+```
 ########################################################
 
 Authors: Usue Mori, Alexander Mendiburu, Sanjoy Dasgupta and Jose A. Lozano
@@ -106,3 +125,5 @@ REQUIREMENTS
 		./Prediction/Others/prediction.R
 		NOTE1: The working directory must be Prediction/Others 
 		NOTE2: Parameters, must be modified, they are defined at the beginning of the source files.
+
+```
