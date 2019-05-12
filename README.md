@@ -6,17 +6,17 @@ code by Usue Mori (usue.mori@ehu.eus) (original `README.txt` below)
 
 build docker image with all dependencies
 ```
-docker build -t EarlyClassification .
+docker build -t ec .
 ```
 
 run interactively
 ```
-docker run -ti EarlyClassification
+docker run -ti ec
 ```
 
 run steps 1 to 4 from the original code
 ```
-docker run EarlyClassification bash run.sh
+docker run ec bash run.sh
 ```
 
 # Original Code
