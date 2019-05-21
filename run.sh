@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "1.- Obtain probabilities for training series:"
 echo $(date)
 

@@ -1,0 +1,6 @@
+numpy
+jupyter
+rpy2
+pandas
+matplotlib
+tzlocal

@@ -1,1 +1,5 @@
 .ipynb_checkpoints
+*.Rhistory
+Code/Test.probabilities/.Rhistory
+Code/Train.probabilities/.Rhistory
+
