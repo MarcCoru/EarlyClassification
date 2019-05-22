@@ -1,0 +1,62 @@
+Wed 22 May 2019 01:31:20 PM UTC 1.- Obtain probabilities for training series:
+Loading required package: proxy
+
+Attaching package: ‘proxy’
+
+The following objects are masked from ‘package:stats’:
+
+    as.dist, dist
+
+The following object is masked from ‘package:base’:
+
+    as.matrix
+
+Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+Loaded TSdist v3.5. See ?TSdist for help, citation("TSdist") for use in publication.
+
+Warning messages:
+1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+2: 'rgl_init' failed, running with rgl.useNULL = TRUE 
+Error in -testindices : invalid argument to unary operator
+Execution halted
+Wed 22 May 2019 01:31:22 PM UTC 2.- Obtain probabilities for testing series:
+Loading required package: proxy
+
+Attaching package: ‘proxy’
+
+The following objects are masked from ‘package:stats’:
+
+    as.dist, dist
+
+The following object is masked from ‘package:base’:
+
+    as.matrix
+
+Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+Loaded TSdist v3.5. See ?TSdist for help, citation("TSdist") for use in publication.
+
+Warning messages:
+1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+2: 'rgl_init' failed, running with rgl.useNULL = TRUE 
+Wed 22 May 2019 01:31:24 PM UTC 3.- Optimization: 
+Loading required package: foreach
+Loading required package: iterators
+Package 'GA' version 3.2
+Type 'citation("GA")' for citing this R package in publications.
+
+Attaching package: ‘GA’
+
+The following object is masked from ‘package:utils’:
+
+    de
+
+There were 50 or more warnings (use warnings() to see the first 50)
+Wed 22 May 2019 01:44:36 PM UTC 4.- Prediction: 
+run.sh: line 19: cd: /EarlyClassification/Prediction/Others: No such file or directory
+Fatal error: cannot open file 'prediction.R': No such file or directory
+Wed 22 May 2019 01:44:36 PM UTC done...
+
