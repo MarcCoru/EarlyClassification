@@ -1,27 +1,22 @@
 #!/bin/bash
-echo "1.- Obtain probabilities for training series:"
-echo $(date)
+echo "$(date) 1.- Obtain probabilities for training series:"
 
 cd /EarlyClassification/Code/Train.probabilities
 Rscript posterior.probabilities.R
 
-echo "2.- Obtain probabilities for testing series:"
-echo $(date)
+echo "$(date) 2.- Obtain probabilities for testing series:"
 
 cd /EarlyClassification/Code/Test.probabilities
 Rscript posterior.probabilities.R
 
-echo "3.- Optimization: "
-echo $(date)
+echo "$(date) 3.- Optimization: "
 
 cd /EarlyClassification/Code/Optimization/Others
 Rscript optimization.simple.R
 
-echo "4.- Prediction: "
-echo $(date)
+echo "$(date) 4.- Prediction: "
 
 cd /EarlyClassification/Prediction/Others
 Rscript prediction.R
 
-echo "done..."
-echo $(date)
+echo "$(date) done..."

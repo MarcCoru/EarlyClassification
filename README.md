@@ -14,9 +14,19 @@ run interactively
 docker run -ti ec
 ```
 
+mount directories `Databases` and `Results`
+```
+docker run -v $PWD/Databases:/EarlyClassification/Databases -v $PWD/Results:/EarlyClassification/Results -ti ec
+```
+
 run steps 1 to 4 from the original code
 ```
 docker run ec bash run.sh
+```
+
+run code with differently sized datasets
+```
+docker run -v $PWD/Databases:/EarlyClassification/Databases -v $PWD/Results:/EarlyClassification/Results ec bash runtimes.sh
 ```
 
 # Original Code

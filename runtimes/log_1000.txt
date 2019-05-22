@@ -1,0 +1,63 @@
+1.- Obtain probabilities for training series:
+Mon 20 May 2019 06:50:39 PM UTC
+Loading required package: proxy
+Attaching package: ‘proxy’
+The following objects are masked from ‘package:stats’:
+    as.dist, dist
+The following object is masked from ‘package:base’:
+    as.matrix
+Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+Loaded TSdist v3.5. See ?TSdist for help, citation("TSdist") for use in publication.
+Warning messages:
+1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+2: 'rgl_init' failed, running with rgl.useNULL = TRUE 
+^C
+<^C^C2.- Obtain probabilities for testing series:
+Mon 20 May 2019 09:34:38 PM UTC
+Loading required package: proxy
+Attaching package: ‘proxy’
+The following objects are masked from ‘package:stats’:
+    as.dist, dist
+The following object is masked from ‘package:base’:
+    as.matrix
+Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+Loaded TSdist v3.5. See ?TSdist for help, citation("TSdist") for use in publication.
+Warning messages:
+1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
+2: 'rgl_init' failed, running with rgl.useNULL = TRUE 
+3.- Optimization: 
+Mon 20 May 2019 10:31:22 PM UTC
+Loading required package: foreach
+Loading required package: iterators
+Package 'GA' version 3.2
+Type 'citation("GA")' for citing this R package in publications.
+Attaching package: ‘GA’
+The following object is masked from ‘package:utils’:
+    de
+Warning messages:
+1: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'min' arg is deprecated. Use 'lower' instead.
+2: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'max' arg is deprecated. Use 'upper' instead.
+3: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'min' arg is deprecated. Use 'lower' instead.
+4: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'max' arg is deprecated. Use 'upper' instead.
+5: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'min' arg is deprecated. Use 'lower' instead.
+6: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'max' arg is deprecated. Use 'upper' instead.
+7: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'min' arg is deprecated. Use 'lower' instead.
+8: In ga(type = "real-valued", cost_uniclass2, probabilities = probabilities,  :
+  'max' arg is deprecated. Use 'upper' instead.
+4.- Prediction: 
+Tue 21 May 2019 01:45:54 AM UTC
+run.sh: line 23: cd: /EarlyClassification/Prediction/Others: No such file or directory
+Fatal error: cannot open file 'prediction.R': No such file or directory
+done...
+Tue 21 May 2019 01:45:54 AM UTC
