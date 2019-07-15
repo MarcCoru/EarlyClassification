@@ -15,16 +15,26 @@ for(fold in c(1:5)){
 
 #Load data
 load(paste("../../Databases/UCR-",numbd,".RData",sep=""))
-train<-database[[1]][database[[1]]$tt==0,]
-train$tt<-NULL
-classes<-as.factor(database[[2]][which(database[[1]]$tt==0)])
+  
+data <- database[[1]]
+classes <- as.factor(database[[2]])
+tt <- database[[3]]
 
+train <- data[tt==0,,]
+train_classes <- classes[tt==0]
+
+  
+# train<-database[[1]][database[[1]]$tt==0,]
+# train$tt<-NULL
+# classes<-as.factor(database[[2]][which(database[[1]]$tt==0)])
+# 
 set.seed(123)
-cv<-generateCVRuns(classes, ntimes=1, nfold=5, stratified=TRUE)
+cv<-generateCVRuns(train_classes, ntimes=1, nfold=5, stratified=TRUE)
 testindices<-cv[[1]][[fold]]
 trainindices<-c(1:dim(train)[1])[-testindices]
-traingp<-train[trainindices,]
-testgp<-train[testindices,]
+
+traingp<-train[trainindices,,]
+testgp<-train[testindices,,]
 
 
 distance<-1
@@ -37,6 +47,7 @@ thetaestimate<-FALSE
 earlyness<-round(earlynessperc*dim(traingp)[2]/100)
 
 #Train SVM model
+print(unique(classes[trainindices]))
 predicted<-trainmodel(traingp,classes[trainindices],testgp,classes[testindices],kernel=1, earlyness, distance, param, thetaestimate)
 predicted<-as.data.frame(predicted)
 predicted$class<-classes[testindices]
