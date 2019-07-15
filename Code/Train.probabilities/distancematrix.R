@@ -8,8 +8,12 @@ distanceMatrix<-function(train, test, earlyness, distance, param){
   ##########For distance matrix of training set###########
   ########################################################
   if(is.null(test)){
-    truncatedtrain<-as.matrix(train[,1:earlyness])
     if(distance==1){
+      if(length(dim(train)) == 2) {
+        truncatedtrain<-as.matrix(train[,1:earlyness])
+      } else {
+        truncatedtrain<-matrix(train[,1:earlyness,], nrow=dim(train)[1], byrow=F)
+      }
       dtrain<-as.matrix(TSDatabaseDistances(truncatedtrain, distance="euclidean"))
 
     }else if(distance==2){
@@ -50,11 +54,18 @@ distanceMatrix<-function(train, test, earlyness, distance, param){
       dtest<-matrix(nrow=dim(test)[1],ncol=dim(train)[1])
       
       for(k in c(1:dim(test)[1])){
-        
-        truncatedtest<-as.numeric(test[k,1:earlyness])
-        
-        #FOR EUCLIDEAN DISTANCE SIMPLY TRUNCATE SERIES
-        truncatedtrain<-as.matrix(train[,1:earlyness])
+
+        if(length(dim(train)) == 2) {
+          truncatedtest<-as.numeric(test[k,1:earlyness])
+
+          #FOR EUCLIDEAN DISTANCE SIMPLY TRUNCATE SERIES
+          truncatedtrain<-as.matrix(train[,1:earlyness])
+        } else {
+          truncatedtest<-c(test[k,1:earlyness,])
+          truncatedtrain<-matrix(train[,1:earlyness,], nrow=dim(train)[1], byrow=F)
+        }
+
+
         if(distance==1){
           dtest[k,]<-apply(as.matrix(truncatedtrain), 1, TSDistances, 
                   x=truncatedtest, distance="euclidean")

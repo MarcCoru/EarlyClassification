@@ -16,9 +16,13 @@ numbd <- 4
     for(fold in c(1:5)){
     fichero<-paste("../../Results/Probabilities/Train/Raw/probs-",numbd,"-",earlynessperc,"-",rep,"-",fold,".txt",sep="")
     aux<-read.table(fichero, header=TRUE, check.names=FALSE)
+    print(fichero)
+    print(dim(aux))
     probs<-rbind(probs,aux)
     }
     }
+    
+    print("ok")
     
     probs<-probs[,order(names(probs))]
     

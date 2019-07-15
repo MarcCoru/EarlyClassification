@@ -12,15 +12,16 @@ for(earlynessperc in c(1:20)*5){
 
 #Load data
 load(paste("../../Databases/UCR-",numbd,".RData",sep=""))
-train<-database[[1]][database[[1]]$tt==0,]
-train$tt<-NULL
-classestrain<-as.factor(database[[2]][which(database[[1]]$tt==0)])
 
-test<-database[[1]][database[[1]]$tt==1,]
-test$tt<-NULL
-classestest<-as.factor(database[[2]][which(database[[1]]$tt==1)])
+data <- database[[1]]
+classes <- as.factor(database[[2]])
+tt <- database[[3]]
 
+train <- data[tt==0,,]
+classestrain <- classes[tt==0]  
 
+test <- data[tt==1,,]
+classestest <- classes[tt==1]
 
 distance<-1
 param<-0
