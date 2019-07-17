@@ -3,3 +3,6 @@
 Code/Test.probabilities/.Rhistory
 Code/Train.probabilities/.Rhistory
 
+Results/*
+Databases/BavarianCrops*.RData
+Databases/*.RData

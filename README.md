@@ -1,4 +1,9 @@
-# Fork
+# Fork (Multivariate)
+
+We extended code of Mori et al. (2017) to Multi-variate data.
+This required changing data loading and reading in the R-Code. 
+The forked uni-variate code is located in the `univariate` branch. 
+
 added `Dockerfile` and execution script `run.sh`
 
 forked by marc.russwurm@tum.de
