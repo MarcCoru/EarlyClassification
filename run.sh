@@ -28,6 +28,6 @@ Rscript optimization.simple.R  >> /EarlyClassification/Results/run.out.log
 echo "$(date) 4.- Prediction: " >> /EarlyClassification/Results/run.log
 
 cd /EarlyClassification/Code/Prediction/Others
-Rscript prediction.R >> /EarlyClassification/Results/run.out.log
+Rscript prediction_simple.R >> /EarlyClassification/Results/run.out.log
 
 echo "$(date) done..."
