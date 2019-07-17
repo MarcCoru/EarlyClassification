@@ -16,7 +16,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y xorg lib
 #RUN Rscript -e "install.packages(c('TSclust'), dependencies=TRUE)"
 RUN Rscript -e "install.packages(c('TSdist'), dependencies=TRUE)"
 
-COPY . /EarlyClassification
+COPY ./Code /EarlyClassification/Code
+COPY ./run.sh /EarlyClassification/
 
 WORKDIR /EarlyClassification
 

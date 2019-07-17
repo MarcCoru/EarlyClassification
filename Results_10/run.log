@@ -1,6 +1,0 @@
-Wed 22 May 2019 10:57:15 AM UTC 1.- Obtain probabilities for training series:
-Wed 22 May 2019 10:57:16 AM UTC 2.- Obtain probabilities for testing series:
-Wed 22 May 2019 10:57:17 AM UTC 3.- Optimization: 
-Wed 22 May 2019 10:57:17 AM UTC 4.- Prediction: 
-Fatal error: cannot open file 'prediction.R': No such file or directory
-Wed 22 May 2019 10:57:17 AM UTC done...

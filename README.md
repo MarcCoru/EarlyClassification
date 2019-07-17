@@ -24,14 +24,14 @@ mount directories `Databases` and `Results`
 docker run -v $PWD/Databases:/EarlyClassification/Databases -v $PWD/Results:/EarlyClassification/Results -ti ec
 ```
 
-run steps 1 to 4 from the original code
+run steps 1 to 4 from the original code (forwarding Datasets and Results directories)
 ```
-docker run ec bash run.sh
+docker run -v $PWD/Databases:/EarlyClassification/Databases -v $PWD/Results:/EarlyClassification/Results ec bash run.sh
 ```
 
 run code with differently sized datasets
 ```
-docker run -v $PWD/Databases:/EarlyClassification/Databases -v $PWD/Results:/EarlyClassification/Results ec bash runtimes.sh
+bash runtimes.sh
 ```
 
 # Original Code
