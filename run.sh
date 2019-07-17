@@ -1,3 +1,5 @@
+bash mkresultsdir.sh
+
 #!/bin/bash
 echo "$(date) 1.- Obtain probabilities for training series:"
 
