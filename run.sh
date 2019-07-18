@@ -30,4 +30,4 @@ echo "$(date) 4.- Prediction: " >> /EarlyClassification/Results/run.log
 cd /EarlyClassification/Code/Prediction/Others
 Rscript prediction_simple.R >> /EarlyClassification/Results/run.out.log
 
-echo "$(date) done..."
+echo "$(date) done..." >> /EarlyClassification/Results/run.out.log
